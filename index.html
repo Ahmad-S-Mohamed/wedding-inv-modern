@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قصة حبنا - دعوة زفاف ملكية </title>
+    <meta name="description" content="نفتخر بدعوتكم لمشاركتنا فرحة العمر ومتابعة قصة حبنا التي تكللت بالزواج.">
+
+    <!-- الخطوط وأيقونات فاخرة -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Cairo:wght@300;400;600;700&family=Reem+Kufi:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- مكتبة التنسيق السريع Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#fffdf5', 100: '#fdf0bf', 200: '#fdf0bf', 300: '#fae28c',
+                            400: '#f6cf51', 500: '#eeb323', 600: '#cf9117', 700: '#ab7014',
+                            800: '#8b5615', 900: '#734416', 950: '#432308'
+                        },
+                        royal: '#0d1117'
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        amiri: ['Amiri', 'serif'],
+                        reem: ['Reem Kufi', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body class="bg-royal text-gray-200 font-cairo overflow-x-hidden selection:bg-gold-600 selection:text-white">
+
+    <!-- المشهد السينمائي الرئيسي (Hero Section) - يظهر فوراً وبفخامة -->
+    <header id="hero-section"
+        class="relative min-h-screen flex flex-col justify-center items-center bg-radial-dark py-12 px-4">
+        <div class="absolute inset-0 bg-[url('assets/images/pattern.png')] opacity-5 pointer-events-none"></div>
+
+        <div class="text-center z-10 max-w-4xl mx-auto w-full">
+            <span id="hero-badge"
+                class="inline-block text-gold-400 border border-gold-500/30 px-6 py-2 rounded-full text-xs md:text-sm font-semibold tracking-widest mb-6 bg-gold-950/20 backdrop-blur-sm">أهلاً
+                بكم في ليلة العمر</span>
+
+            <!-- صور العروسين الفاخرة متجاوبة بالكامل -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 md:gap-20 my-6">
+                <div class="relative group hero-avatar-wrapper" id="groom-avatar">
+                    <div
+                        class="absolute -inset-1.5 from-gold-400 to-amber-700 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-700">
+                    </div>
+                    <div
+                        class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-gold-300 shadow-2xl">
+                        <img src="media/pic/man.jpg" alt="العريس"
+                            class="w-full h-full object-cover transform scale-105 hover:scale-110 transition duration-700">
+                    </div>
+                    <p class="mt-3 font-arial text-xlg md:text-xl text-gold-300 tracking-wide">أحمد</p>
+                </div>
+
+                <div class="hidden sm:block font-amiri text-4xl md:text-5xl text-gold-400 animate-pulse">&</div>
+
+                <div class="relative group hero-avatar-wrapper" id="bride-avatar">
+                    <div
+                        class="absolute -inset-1.5  from-gold-400 to-amber-700 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-700">
+                    </div>
+                    <div
+                        class="relative w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 rounded-full overflow-hidden border-2 border-gold-300 shadow-2xl">
+                        <img src="media/pic/weman.jpg" alt="العروس"
+                            class="w-full h-full object-cover transform scale-105 hover:scale-110 transition duration-700">
+                    </div>
+                    <p class="mt-3 font-reem text-xlg md:text-xl text-gold-300 tracking-wide">ســـارة</p>
+                </div>
+            </div>
+
+
+            <p id="hero-desc" class="font-light text-sm md:text-lg text-gray-400 max-w-xl mx-auto leading-relaxed px-4">
+                يصنع الحب المعجزات، وها نحن اليوم نقف على أعتاب فصل جديد من فصول حياتنا معاً.
+            </p>
+
+            <div class="mt-8 animate-bounce">
+                <a href="#story-section"
+                    class="text-gold-400/70 hover:text-gold-400 transition-all text-xs tracking-wider">
+                    <p class="mb-1">انزل لتعيش القصة</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. قسم قصة الحب (Story Journey) - متناسق ومتناظر بالكامل -->
+    <section id="story-section" class="py-20 px-4 bg-royal/85 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-3" data-aos="fade-up">رحلة حبنا وعشقنا</h2>
+                <div class="h-0.5 w-24 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- الخط الزمني المتناسق ) -->
+            <div
+                class="relative timeline-container space-y-12 before:absolute before:top-0 before:bottom-0 before:w-0.5 before:bg-gold-500/30 before:right-4 md:before:right-1/2">
+
+                <!-- المرحلة 1 -->
+                <div class="relative flex flex-col md:flex-row items-start md:justify-between group" data-aos="fade-up">
+                    <div
+                        class="timeline-dot absolute right-3 md:right-1/2 md:translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full bg-gold-500 border-2 border-royal z-10 transition-transform duration-300 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="w-full md:w-[45%] mr-10 md:mr-0 md:text-right bg-gradient-to-br from-gray-900 to-royal p-5 rounded-2xl border border-gold-500/10 shadow-xl">
+                        <img src="media/pic/firstDay.jpg" alt="اللقاء الأول"
+                            class="w-full h-40 md:h-48 object-cover rounded-xl mb-3 grayscale hover:grayscale-0 transition duration-500">
+                        <span class="text-xs text-gold-400 font-semibold">سبتمبر 2023</span>
+                        <h3 class="font-reem text-lg text-white my-1">اللقاء الأول</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">بين زحام العابرين، التقت الأعين
+                            مصادفة، لتتوقف الأرض عن الدوران وتبدأ نبضات قلبينا بالعزف.</p>
+                    </div>
+                </div>
+
+                <!-- المرحلة 2 -->
+                <div class="relative flex flex-col md:flex-row items-start md:justify-between group" data-aos="fade-up">
+                    <div
+                        class="timeline-dot absolute right-3 md:right-1/2 md:translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full bg-gold-500 border-2 border-royal z-10 transition-transform duration-300 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="w-full md:w-[45%] mr-10 md:mr-0 md:mr-auto bg-gradient-to-br from-gray-900 to-royal p-5 rounded-2xl border border-gold-500/10 shadow-xl">
+                        <img src="media/pic/first-talk.jpg" alt="أول حديث"
+                            class="w-full h-40 md:h-48 object-cover rounded-xl mb-3 grayscale hover:grayscale-0 transition duration-500">
+                        <span class="text-xs text-gold-400 font-semibold">أكتوبر 2023</span>
+                        <h3 class="font-reem text-lg text-white my-1">أول حديث وعمر جديد</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">كلمات بسيطة بدت كأنها لحن قديم نعرفه
+                            كِلانا، فتحت لنا أبواب العوالم المغلقة ليكتشف كل منا موطنه.</p>
+                    </div>
+                </div>
+
+                <!-- المرحلة 3 -->
+                <div class="relative flex flex-col md:flex-row items-start md:justify-between group" data-aos="fade-up">
+                    <div
+                        class="timeline-dot absolute right-3 md:right-1/2 md:translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full bg-gold-500 border-2 border-royal z-10 transition-transform duration-300 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="w-full md:w-[45%] mr-10 md:mr-0 bg-gradient-to-br from-gray-900 to-royal p-5 rounded-2xl border border-gold-500/10 shadow-xl">
+                        <img src="media/pic/fell-lov.jpg" alt="بداية الحب"
+                            class="w-full h-40 md:h-48 object-cover rounded-xl mb-3 grayscale hover:grayscale-0 transition duration-500">
+                        <span class="text-xs text-gold-400 font-semibold">ديسمبر 2023</span>
+                        <h3 class="font-reem text-lg text-white my-1">بداية الحب والاعتراف</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">لم نعد نستطيع إخفاء اللهفة، فكان
+                            الاعتراف الصادق الذي وثّق عهد قلوبنا بألا نفترق أبداً.</p>
+                    </div>
+                </div>
+
+                <!-- المرحلة 4 -->
+                <div class="relative flex flex-col md:flex-row items-start md:justify-between group" data-aos="fade-up">
+                    <div
+                        class="timeline-dot absolute right-3 md:right-1/2 md:translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full bg-gold-500 border-2 border-royal z-10 transition-transform duration-300 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="w-full md:w-[45%] mr-10 md:mr-0 md:mr-auto bg-gradient-to-br from-gray-900 to-royal p-5 rounded-2xl border border-gold-500/10 shadow-xl">
+                        <img src="media/pic/ringg.jpg" alt="الخطوبة"
+                            class="w-full h-40 md:h-48 object-cover rounded-xl mb-3 grayscale hover:grayscale-0 transition duration-500">
+                        <span class="text-xs text-gold-400 font-semibold">مايو 2024</span>
+                        <h3 class="font-reem text-lg text-white my-1">يوم الخطوبة المبارك</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">لبسنا الخواتم عهداً ووعداً أمام
+                            الجميع، لتصبح الأحلام حقيقة مباركة نقترب منها يوماً بعد يوم.</p>
+                    </div>
+                </div>
+
+                <!-- المرحلة 5 -->
+                <div class="relative flex flex-col md:flex-row items-start md:justify-between group" data-aos="fade-up">
+                    <div
+                        class="timeline-dot absolute right-3 md:right-1/2 md:translate-x-1/2 top-2 w-3.5 h-3.5 rounded-full bg-gold-500 border-2 border-royal z-10 transition-transform duration-300 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="w-full md:w-[45%] mr-10 md:mr-0 bg-gradient-to-br from-gray-900 to-royal p-5 rounded-2xl border border-gold-500/10 shadow-xl">
+                        <img src="media/pic/endHapy.jpg" alt="الاستعداد للزفاف"
+                            class="w-full h-40 md:h-48 object-cover rounded-xl mb-3 grayscale hover:grayscale-0 transition duration-500">
+                        <span class="text-xs text-gold-400 font-semibold">الآن</span>
+                        <h3 class="font-reem text-lg text-white my-1">الاستعداد لليلة العمر</h3>
+                        <p class="text-xs md:text-sm text-gray-400 leading-relaxed">وها نحن هنا، نجهز تفاصيل فرحتنا
+                            الكبرى، ونعد الدقائق المتبقية لنعلن زواجنا الأبدي للعالم.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. قسم الفيديو (Premium Video Player) -->
+    <section id="video-section" class="py-20 px-4 bg-gradient-to-b from-royal via-gray-900 to-royal">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-10" data-aos="fade-up">ذكريات لا تنسى بالصوت
+                والصورة</h2>
+
+            <div class="relative p-2 md:p-3 rounded-2xl border border-gold-500/30 bg-black/60 shadow-2xl"
+                data-aos="zoom-in">
+                <div
+                    class="relative aspect-video rounded-xl overflow-hidden bg-zinc-900 flex items-center justify-center">
+                    <video id="main-wedding-video" class="w-full h-full object-cover hidden" preload="metadata">
+                        <source id="video-source" src="media/vid/vid1.mp4" type="video/mp4">
+                    </video>
+                    <div id="video-poster"
+                        class="absolute inset-0 bg-cover bg-center flex items-center justify-center transition duration-500"
+                        style="background-image: url('media/pic/ringPic.jpg');">
+                        <div class="absolute inset-0 bg-black/50"></div>
+                        <button id="video-play-btn"
+                            class="relative z-10 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-r from-gold-500 to-amber-600 rounded-full flex items-center justify-center text-royal text-xl md:text-2xl shadow-2xl hover:scale-110 transition-transform focus:outline-none">
+                            <i class="fa-solid fa-play translate-x-[-2px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- أزرار مرنة متوافقة مع شاشات الجوال -->
+            <div class="flex flex-col sm:flex-row justify-center gap-3 mt-6 px-2" data-aos="fade-up">
+                <button onclick="changeVideo('media/vid/vid1.mp4', this)"
+                    class="playlist-btn active-playlist-btn px-5 py-2.5 rounded-full border border-gold-500/20 text-xs md:text-sm font-semibold transition-all">فيديو
+                    الخطوبة</button>
+                <button onclick="changeVideo('media/vid/vid3.mp4', this)"
+                    class="playlist-btn px-5 py-2.5 rounded-full border border-gold-500/20 text-xs md:text-sm font-semibold transition-all">فيديو
+                    الذكريات</button>
+                <button onclick="changeVideo('media/vid/vid2.mp4', this)"
+                    class="playlist-btn px-5 py-2.5 rounded-full border border-gold-500/20 text-xs md:text-sm font-semibold transition-all">رسالة
+                    للأصدقاء والعائلة</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. لعبة المتاهة الرومانسية (Romantic Maze Game) -->
+    <section id="maze-section" class="py-20 px-4 bg-royal relative overflow-hidden">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-2" data-aos="fade-up">ساعد العريس للوصول للعروس
+            </h2>
+            <p class="text-xs text-gray-400 mb-6" data-aos="fade-up">استخدم الأسهم بلوحة المفاتيح أو اسحب بإصبعك على
+                المتاهة للتحرك</p>
+
+            <!-- حاوية تمنع تمدد اللعبة خارج شاشة الجوال وتضمن استجابة مثالية للأبعاد -->
+            <div class="relative bg-gray-900/90 border border-gold-500/20 p-2 md:p-4 rounded-2xl shadow-2xl inline-block max-w-full overflow-hidden"
+                data-aos="zoom-in">
+                <div id="maze-container" class="grid bg-black rounded-xl overflow-hidden relative mx-auto touch-none">
+                    <!-- سيتم توليد خلايا المتاهة برمجياً -->
+                </div>
+
+                <!-- شاشة نجاح اللعبة المنبثقة -->
+                <div id="maze-success"
+                    class="absolute inset-0 bg-black/95 flex flex-col justify-center items-center p-4 text-center opacity-0 pointer-events-none transition-opacity duration-500 rounded-2xl z-20">
+                    <div id="hearts-emitter" class="absolute inset-0 pointer-events-none"></div>
+                    <i class="fa-solid fa-heart text-red-500 text-4xl mb-3 animate-ping"></i>
+                    <p class="font-amiri text-base md:text-lg text-gold-200 leading-relaxed max-w-sm px-2">
+                        "بعد رحلة طويلة من الأحلام... وجدتُ قلبي بين يديكِ... وها نحن نبدأ أجمل فصول العمر."
+                    </p>
+                    <button id="maze-next-btn"
+                        class="mt-5 px-6 py-2.5 bg-gradient-to-r from-gold-500 to-amber-600 text-royal font-bold rounded-full text-xs md:text-sm shadow-xl transition-all hover:scale-105">
+                        اكتشف الفصل التالي
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. قسم العد التنازلي (Countdown) -->
+    <section id="countdown-section" class="py-20 px-4 bg-gradient-to-b from-royal to-gray-900 text-center relative">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-10" data-aos="fade-up">الوقت المتبقي لجمع شملنا
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto" data-aos="zoom-out">
+                <div
+                    class="bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 rounded-2xl border border-gold-500/10 shadow-xl">
+                    <span id="cd-days"
+                        class="block font-reem text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gold-400 font-bold drop-shadow-glow">00</span>
+                    <span class="text-[11px] md:text-xs text-gray-400 mt-1 block">أيام</span>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 rounded-2xl border border-gold-500/10 shadow-xl">
+                    <span id="cd-hours"
+                        class="block font-reem text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gold-400 font-bold drop-shadow-glow">00</span>
+                    <span class="text-[11px] md:text-xs text-gray-400 mt-1 block">ساعات</span>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 rounded-2xl border border-gold-500/10 shadow-xl">
+                    <span id="cd-minutes"
+                        class="block font-reem text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gold-400 font-bold drop-shadow-glow">00</span>
+                    <span class="text-[11px] md:text-xs text-gray-400 mt-1 block">دقائق</span>
+                </div>
+                <div
+                    class="bg-gradient-to-br from-gray-900 to-black p-4 md:p-6 rounded-2xl border border-gold-500/10 shadow-xl">
+                    <span id="cd-seconds"
+                        class="block font-reem text-3xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-b from-white to-gold-400 font-bold drop-shadow-glow-fast">00</span>
+                    <span class="text-[11px] md:text-xs text-gray-400 mt-1 block">ثواني</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. قسم معرض الذكريات (Cinematic Gallery) -->
+    <section id="gallery-section" class="py-20 px-4 bg-royal">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-3" data-aos="fade-up">معرض لحظاتنا السعيدة
+                </h2>
+                <div class="h-0.5 w-24 bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- سلايدر العرض التلقائي المتجاوب -->
+            <div class="relative w-full h-[240px] sm:h-[400px] md:h-[500px] rounded-2xl overflow-hidden border border-gold-500/20 group shadow-2xl"
+                data-aos="zoom-in">
+                <div id="slideshow-wrapper" class="w-full h-full relative"></div>
+
+                <button onclick="prevSlide()"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/60 border border-gold-500/20 text-gold-400 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity focus:outline-none z-10"><i
+                        class="fa-solid fa-chevron-left text-xs"></i></button>
+                <button onclick="nextSlide()"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/60 border border-gold-500/20 text-gold-400 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity focus:outline-none z-10"><i
+                        class="fa-solid fa-chevron-right text-xs"></i></button>
+            </div>
+
+            <!-- شبكة مصغرات الصور الكليكابل -->
+            <div class="grid grid-cols-2 md:grid-cols-8 gap-3 mt-4" data-aos="fade-up">
+
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(0)"><img src="media/pic/gall-1.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(1)"><img src="media/pic/gall-2.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(2)"><img src="media/pic/gall-3.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(3)"><img src="media/pic/gall-4.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(4)"><img src="media/pic/gall-5.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(5)"><img src="media/pic/gall-6.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(6)"><img src="media/pic/gall-7.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+                <div class="overflow-hidden rounded-xl h-20 sm:h-24 cursor-pointer border border-gold-500/10 hover:border-gold-500/40 transition-all"
+                    onclick="openFullscreenGallery(7)"><img src="media/pic/gall-8.jpg" alt="uplouad"
+                        class="w-full h-full object-cover hover:scale-105 transition duration-300"></div>
+            </div>
+        </div>
+
+        <!-- مودال الفول سكرين - يبدأ بطبقة خلفية سالبة z-index لضمان عدم حجب أي عنصر عند بداية تشغيل الموقع -->
+        <div id="fullscreen-lightbox"
+            class="fixed inset-0 bg-black/95 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 p-4 select-none">
+            <button id="close-lightbox-btn" onclick="closeFullscreenGallery()"
+                class="absolute top-6 right-6 text-white text-3xl hover:text-gold-400 active:scale-90 transition-all focus:outline-none z-[60] p-3 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="max-w-full max-h-full flex justify-center items-center pointer-events-none">
+                <img id="lightbox-img" src="" alt="Full view"
+                    class="max-w-full max-h-[85vh] rounded-lg object-contain shadow-2xl border border-gold-500/20 pointer-events-auto">
+            </div>
+        </div>
+
+        <!-- 7. قسم الرسائل السرية -->
+        <section id="letters-section" class="py-20 px-4 bg-gradient-to-b from-royal to-black">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-reem text-2xl md:text-4xl text-gold-400 text-center mb-12" data-aos="fade-up">رسائل سرية
+                    متبادلة</h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- الرسالة 1 -->
+                    <div class="letter-container" data-aos="fade-up">
+                        <div class="envelope bg-gradient-to-br from-amber-950 to-gold-950 p-4 rounded-xl border border-gold-500/20 relative cursor-pointer shadow-xl transition-all"
+                            onclick="toggleLetter(this)">
+                            <div
+                                class="envelope-cover absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-amber-900 to-gold-900 border border-gold-400/20 rounded-xl z-10 transition-transform duration-500 origin-top p-4">
+                                <i class="fa-solid fa-envelope-open-text text-gold-300 text-3xl mb-2"></i>
+                                <p class="font-reem text-base text-gold-100">من أحمد إلى سارة</p>
+                                <span class="text-[10px] text-gold-400/60 mt-3 animate-pulse">انقر لفتح الرسالة</span>
+                            </div>
+                            <div
+                                class="letter-content bg-zinc-900/90 p-5 rounded-lg border border-gold-500/10 text-center min-h-[160px] flex items-center justify-center">
+                                <p class="font-amiri text-base text-gold-100 leading-relaxed">"سارتي الجميلة، أنتِ لستِ
+                                    فقط
+                                    شريكة حياتي، بل أنتِ حلمي الذي تمنيت من الله تحقيقه، والآن أراكِ واقعاً يزين كل
+                                    أيامي
+                                    القادمة."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- الرسالة 2 -->
+                    <div class="letter-container" data-aos="fade-up">
+                        <div class="envelope bg-gradient-to-br from-amber-950 to-gold-950 p-4 rounded-xl border border-gold-500/20 relative cursor-pointer shadow-xl transition-all"
+                            onclick="toggleLetter(this)">
+                            <div
+                                class="envelope-cover absolute inset-0 flex flex-col justify-center items-center bg-gradient-to-br from-amber-900 to-gold-900 border border-gold-400/20 rounded-xl z-10 transition-transform duration-500 origin-top p-4">
+                                <i class="fa-solid fa-envelope-open-text text-gold-300 text-3xl mb-2"></i>
+                                <p class="font-reem text-base text-gold-100">من سارة إلى أحمد</p>
+                                <span class="text-[10px] text-gold-400/60 mt-3 animate-pulse">انقر لفتح الرسالة</span>
+                            </div>
+                            <div
+                                class="letter-content bg-zinc-900/90 p-5 rounded-lg border border-gold-500/10 text-center min-h-[160px] flex items-center justify-center">
+                                <p class="font-amiri text-base text-gold-100 leading-relaxed">"أحمدي الحبيب، في عينيك
+                                    أجد
+                                    وطني وأماني. أعدك بأن أكون لك رفيقة الدرب الصالحة، المحبة، والداعمة في السراء
+                                    والضراء
+                                    مدى الحياة."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. قسم الأمنيات (Wishes Wall) -->
+        <section id="wishes-section" class="py-20 px-4 bg-royal relative z-20">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="font-reem text-2xl md:text-4xl text-gold-400 text-center mb-10" data-aos="fade-up">لوحة
+                    أمنيات المهنئين</h2>
+
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <!-- نموذج كتابة التهنئة -->
+                    <div class="lg:col-span-1 bg-gradient-to-br from-gray-900 to-black p-5 rounded-2xl border border-gold-500/20 shadow-xl h-fit"
+                        data-aos="fade-up">
+                        <h3 class="font-reem text-lg text-gold-300 mb-4"><i
+                                class="fa-solid fa-pen-nib ml-2 text-xs"></i>اكتب تهنئتك للعروسين</h3>
+                        <form id="wish-form" class="space-y-3">
+                            <div>
+                                <input type="text" id="wish-name" placeholder="اسمك الكريم" required
+                                    class="w-full bg-royal border border-gold-500/20 rounded-xl px-4 py-2 text-xs md:text-sm text-white focus:outline-none focus:border-gold-500">
+                            </div>
+                            <div>
+                                <textarea id="wish-message" rows="3" placeholder="اكتب أمنيتك أو دعاءك للعروسين..."
+                                    required
+                                    class="w-full bg-royal border border-gold-500/20 rounded-xl px-4 py-2 text-xs md:text-sm text-white focus:outline-none focus:border-gold-500 resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="w-full py-2.5 bg-gradient-to-r from-gold-500 to-amber-600 text-royal font-bold rounded-xl text-xs md:text-sm shadow-md transition-transform active:scale-95">إرسال
+                                الأمنية السعيدة</button>
+                        </form>
+                    </div>
+
+                    <!-- جدار عرض التهنئات المستجيب -->
+                    <div class="lg:col-span-2" data-aos="fade-up">
+                        <div id="wishes-wall"
+                            class="grid sm:grid-cols-2 gap-3 max-h-[420px] overflow-y-auto pr-1 custom-scrollbar">
+                            <!-- يتم تحميل الكروت وحفظها هنا تلقائياً برمجياً -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. قسم تفاصيل الحفل ومكانه (Location & Details) -->
+        <section id="location-section" class="py-20 px-4 bg-gradient-to-b from-royal to-black text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="font-reem text-2xl md:text-4xl text-gold-400 mb-10" data-aos="fade-up">تفاصيل وموعد ليلة
+                    الزفاف
+                </h2>
+
+                <div class="grid sm:grid-cols-3 gap-4 mb-8" data-aos="fade-up">
+                    <div
+                        class="p-4 bg-gradient-to-b from-gray-900 to-royal rounded-2xl border border-gold-500/10 shadow-md">
+                        <i class="fa-solid fa-calendar-day text-gold-400 text-2xl mb-2"></i>
+                        <h3 class="font-reem text-base text-white">تاريخ الحفل</h3>
+                        <p class="text-xs text-gray-400 mt-1">12 يوليو 2026</p>
+                    </div>
+                    <div
+                        class="p-4 bg-gradient-to-b from-gray-900 to-royal rounded-2xl border border-gold-500/10 shadow-md">
+                        <i class="fa-solid fa-clock text-gold-400 text-2xl mb-2"></i>
+                        <h3 class="font-reem text-base text-white">توقيت استقبالكم</h3>
+                        <p class="text-xs text-gray-400 mt-1">تمام الساعة 8:00 مساءً</p>
+                    </div>
+                    <div
+                        class="p-4 bg-gradient-to-b from-gray-900 to-royal rounded-2xl border border-gold-500/10 shadow-md">
+                        <i class="fa-solid fa-hotel text-gold-400 text-2xl mb-2"></i>
+                        <h3 class="font-reem text-base text-white">مقر وقاعة الفرح</h3>
+                        <p class="text-xs text-gray-400 mt-1">قاعة الفيروز - فندق الفورسيزونز</p>
+                    </div>
+
+                </div>
+
+                <div class="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-gold-500/20 shadow-2xl mb-6"
+                    data-aos="zoom-in">
+                    <iframe
+                        class="w-full h-full grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.1724578119053!2d31.2291523!3d30.0319483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840ca735e5d13%3A0x95cf2333cf48398e!2sFour+Seasons+Hotel+Cairo+at+The+First+Residence!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <a href="https://maps.app.goo.gl/wJ8rA43Z7Yg2f6wM8" target="_blank"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gold-500 to-amber-600 text-royal font-bold rounded-full text-xs md:text-sm shadow-xl hover:scale-105 transition-all"
+                    data-aos="fade-up">
+                    <i class="fa-solid fa-map-location-dot"></i>الانتقال إلى الموقع على Google Maps
+                </a>
+            </div>
+        </section>
+
+        <!-- 10. مشغل الموسيقى العائم الفاخر (UI محسن ومقيد الأبعاد للموبايل) -->
+        <div id="premium-music-player"
+            class="fixed bottom-4 left-4 right-4 sm:right-auto z-40 bg-black/85 backdrop-blur-md border border-gold-500/20 p-2 sm:px-4 sm:py-3 rounded-2xl flex items-center justify-between sm:justify-start gap-3 shadow-2xl transition-all max-w-full sm:max-w-md">
+            <audio id="wedding-audio-track">
+                <source src="media/sound/sound1.mpeg" type="audio/mp3">
+            </audio>
+
+            <button id="music-play-pause-btn" onclick="toggleAudio()"
+                class="w-9 h-9 min-w-[36px] bg-gold-500 text-royal rounded-full flex items-center justify-center text-sm font-bold shadow-md focus:outline-none">
+                <i class="fa-solid fa-music"></i>
+            </button>
+
+            <div class="hidden sm:block">
+                <p id="player-track-title" class="text-[11px] text-gold-300 font-medium truncate w-28">اللحن الملكي</p>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5"
+                        oninput="changeVolume(this.value)"
+                        class="w-14 h-1 bg-zinc-700 accent-gold-500 rounded-lg appearance-none cursor-pointer">
+                </div>
+            </div>
+
+            <select id="playlist-selector" onchange="switchTrack(this.value)"
+                class="bg-zinc-900 text-gold-300 text-[10px] md:text-xs border border-gold-500/20 rounded-lg p-1.5 focus:outline-none max-w-[150px] sm:max-w-none">
+                <option value="media/sound/sound1.mpeg">اللحن الرومانسي الملكي</option>
+                <option value="media/sound/sound2.mpeg">موسيقى هادئة كلاسيك</option>
+                <option value="media/sound/sound3.mpeg">زفة الفرح والبهجة</option>
+            </select>
+        </div>
+
+        <!-- 11. المفاجأة الختامية -->
+        <section id="finale-section"
+            class="relative min-h-screen flex flex-col justify-center items-center bg-black overflow-hidden px-4 text-center">
+            <canvas id="finale-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-10"></canvas>
+
+            <div class="relative z-20 max-w-2xl mx-auto">
+                <i class="fa-solid fa-heart-half-stroke text-gold-400 text-4xl mb-4 animate-pulse"></i>
+                <h2 id="finale-text-1" class="font-amiri text-3xl md:text-5xl text-gold-300 mb-4 opacity-0">وجودكم يكتمل
+                    به
+                    الفرح</h2>
+                <p id="finale-text-2" class="font-reem text-lg md:text-2xl text-gray-300 opacity-0 leading-relaxed">
+                    ننتظركم
+                    لنصنع أجمل الذكريات معاً</p>
+                <i class="text-stone-600 text-xs tracking-widest mt-8 fa-brands fa-facebook fa-s"><a
+                        href="https://www.facebook.com/ahmad.s.mohamed.280010/"> BY Ahmad S Mohamed © 2026</a></i><br>
+                <i class="text-stone-600 text-xs tracking-widest mt-2 fa-brands fa-whatsapp fa-s"><a
+                        href="https://wa.me/201022399281"> 01022399281 © 2026</a></i>
+                <div class="mt-8 h-px w-36 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto"></div>
+            </div>
+        </section>
+
+        <!-- سكربتات تشغيل الأنيميشن والمنطق المحدث -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({ duration: 800, once: true, offset: 80 });
+        </script>
+        <script src="js/main.js"></script>
+        <script src="js/countdown.js"></script>
+        <script src="js/maze-game.js"></script>
+        <script src="js/gallery.js"></script>
+        <script src="js/wishes.js"></script>
+</body>
+
+</html>

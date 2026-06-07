@@ -1,0 +1,61 @@
+/* التنسيقات الأساسية وضبط الحاويات لتجنب الـ Overflow */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.bg-radial-dark {
+    background: radial-gradient(circle at center, #1a1625 0%, #0d1117 100%);
+}
+
+.drop-shadow-glow {
+    filter: drop-shadow(0 0 8px rgba(238, 179, 23, 0.4));
+}
+
+.drop-shadow-glow-fast {
+    filter: drop-shadow(0 0 12px rgba(218, 145, 23, 0.6));
+}
+
+/* تخصيص السكرول بار لقسم الأمنيات */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.01);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(238, 179, 35, 0.2);
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #eeb323;
+}
+
+/* بطاقات جدار الأمنيات */
+.glass-wish-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(238, 179, 35, 0.1);
+    transition: all 0.3s ease;
+}
+.glass-wish-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(238, 179, 35, 0.3);
+    transform: translateY(-2px);
+}
+
+.active-playlist-btn {
+    background-color: #eeb323 !important;
+    color: #0d1117 !important;
+    border-color: #eeb323 !important;
+}
+
+/* المظاريف السرية */
+.letter-container {
+    perspective: 1000px;
+}
+.envelope.open .envelope-cover {
+    transform: rotateX(140deg);
+    z-index: 0;
+}
