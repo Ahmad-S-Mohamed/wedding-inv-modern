@@ -56,25 +56,132 @@ function toggleLetter(envelopeElement) {
 // التحكم الصوتي للموسيقى المحيطية العائمة
 const audioTrack = document.getElementById("wedding-audio-track");
 const playPauseBtn = document.getElementById("music-play-pause-btn");
+const playlistSelector = document.getElementById("playlist-selector");
+const trackTitle = document.getElementById("player-track-title");
 
+const playlist = [
+    {
+        src: "media/sound/sound1.mpeg",
+        title: "اللحن الرومانسي الملكي"
+    },
+    {
+        src: "media/sound/sound2.mpeg",
+        title: "موسيقى هادئة كلاسيك"
+    },
+    {
+        src: "media/sound/sound3.mpeg",
+        title: "زفة الفرح والبهجة"
+    }
+];
+
+let currentTrack = 0;
+
+// تشغيل / إيقاف
 function toggleAudio() {
     if (audioTrack.paused) {
-        audioTrack.play().catch(() => { console.log("بحاجة لتفاعل بدائي مع المتصفح"); });
-        playPauseBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        audioTrack.play().catch(() => {
+            console.log("المتصفح يحتاج تفاعل المستخدم أولاً");
+        });
+
+        playPauseBtn.innerHTML =
+            '<i class="fa-solid fa-pause"></i>';
+
         playPauseBtn.classList.add("bg-amber-600");
+
     } else {
+
         audioTrack.pause();
-        playPauseBtn.innerHTML = '<i class="fa-solid fa-music"></i>';
+
+        playPauseBtn.innerHTML =
+            '<i class="fa-solid fa-music"></i>';
+
         playPauseBtn.classList.remove("bg-amber-600");
     }
 }
 
-function changeVolume(val) { audioTrack.volume = val; }
-function switchTrack(src) {
-    const isPlaying = !audioTrack.paused;
-    audioTrack.src = src;
+// مستوى الصوت
+function changeVolume(val) {
+    audioTrack.volume = val;
+}
+
+// تحميل أغنية
+function loadTrack(index, autoplay = true) {
+
+    currentTrack = index;
+
+    audioTrack.src = playlist[index].src;
+
+    playlistSelector.value = playlist[index].src;
+
+    if (trackTitle) {
+        trackTitle.textContent = playlist[index].title;
+    }
+
     audioTrack.load();
-    if (isPlaying) audioTrack.play();
+
+    if (autoplay) {
+        audioTrack.play().catch(() => {});
+    }
+
+    playPauseBtn.innerHTML =
+        '<i class="fa-solid fa-pause"></i>';
+
+    playPauseBtn.classList.add("bg-amber-600");
+}
+
+// تغيير الأغنية من القائمة
+function switchTrack(src) {
+
+    const index = playlist.findIndex(
+        track => track.src === src
+    );
+
+    if (index !== -1) {
+        loadTrack(index);
+    }
+}
+
+// الأغنية التالية
+function nextTrack() {
+
+    currentTrack++;
+
+    if (currentTrack >= playlist.length) {
+        currentTrack = 0;
+    }
+
+    loadTrack(currentTrack);
+}
+
+// الأغنية السابقة
+function previousTrack() {
+
+    currentTrack--;
+
+    if (currentTrack < 0) {
+        currentTrack = playlist.length - 1;
+    }
+
+    loadTrack(currentTrack);
+}
+
+// عند انتهاء الأغنية شغل التالية تلقائياً
+audioTrack.addEventListener("ended", nextTrack);
+
+// تحديد الأغنية الحالية عند بدء الصفحة
+const currentSrc = audioTrack.querySelector("source")?.getAttribute("src");
+
+const initialIndex = playlist.findIndex(
+    track => track.src === currentSrc
+);
+
+if (initialIndex !== -1) {
+    currentTrack = initialIndex;
+
+    if (trackTitle) {
+        trackTitle.textContent =
+            playlist[currentTrack].title;
+    }
 }
 
 // محرك لوحة الألعاب النارية والورود في نهاية الصفحة
